@@ -170,7 +170,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
               </p>
               
               <!-- Value Cards Grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                  <div class="bg-slate-50 dark:bg-slate-950 p-5 rounded-2xl border border-slate-100 dark:border-slate-800/80 hover:border-amber-500/20 dark:hover:border-amber-400/20 transition-all duration-300 shadow-sm">
                     <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-3">
                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
@@ -184,13 +184,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                     </div>
                     <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">עמידה בזמנים</h3>
                     <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">מגיע בדיוק בזמן שנקבע, מתקתק עבודה ומכבד את הזמן שלכם.</p>
-                 </div>
-                 <div class="bg-slate-50 dark:bg-slate-950 p-5 rounded-2xl border border-slate-100 dark:border-slate-800/80 hover:border-amber-500/20 dark:hover:border-amber-400/20 transition-all duration-300 shadow-sm">
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-3">
-                       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3M3 12c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M3 12l-3 3m3-3l3 3"/></svg>
-                    </div>
-                    <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">סדר וניקיון מופתי</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">עובד עם שואב אבק צמוד, שומר על הרהיטים ומחזיר את המצב לקדמותו.</p>
                  </div>
               </div>
            </div>
@@ -650,11 +643,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
               <span class="text-sm font-bold text-amber-600 dark:text-amber-500 tracking-wider uppercase font-semibold">יצירת קשר</span>
               <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">מעוניינים לשדרג או לתקן את הבית?</h2>
               <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed">
-                 זמין עבורכם לכל שאלה, ייעוץ מקצועי או קבלת הצעת מחיר מהירה. פשוט לחצו למעבר ישיר לצ'אט בוואטסאפ.
+                 זמין עבורכם לכל שאלה, ייעוץ מקצועי או קבלת הצעת מחיר מהירה בטלפון.
               </p>
            </div>
            
-           <!-- WhatsApp CTA Card -->
+           <!-- WhatsApp CTA Card (Commented out for future restore)
            <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 p-8 sm:p-12 rounded-3xl shadow-xl shadow-slate-100 dark:shadow-none max-w-xl mx-auto space-y-6">
               <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto">
                  <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24">
@@ -667,15 +660,29 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                     מענה מהיר לשליחת תמונות של העבודה הנדרשת וקבלת הערכת מחיר נוחה.
                  </p>
               </div>
-              <a href="https://wa.me/972503262022?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%A0%D7%AA%D7%A0%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%9C%D7%92%D7%91%D7%99%20%D7%A2%D7%91%D7%95%D7%93%D7%AA%20%D7%94%D7%A0%D7%93%D7%99%D7%9E%D7%9F." target="_blank" rel="noopener noreferrer" class="bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-4 px-8 rounded-2xl flex items-center justify-center gap-3 shadow-lg shadow-emerald-500/20 active:scale-98 hover:shadow-emerald-500/30 transition-all duration-200 cursor-pointer text-base sm:text-lg">
-                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403.002 9.803-4.394 9.806-9.805.002-2.62-1.018-5.084-2.871-6.94-1.854-1.855-4.32-2.874-6.945-2.876-5.41 0-9.81 4.4-9.814 9.813-.001 1.538.486 3.036 1.412 4.417l-.956 3.492 3.582-.943v.002zM18.006 14.6c-.328-.164-1.942-.958-2.242-1.068-.3-.11-.518-.164-.737.164-.219.328-.847 1.068-1.039 1.287-.192.219-.384.246-.712.082-.328-.164-1.385-.51-2.637-1.627-.975-.87-1.632-1.946-1.823-2.274-.192-.328-.02-.505.144-.668.148-.146.328-.383.493-.574.164-.192.219-.328.328-.547.11-.219.055-.411-.027-.574-.082-.164-.737-1.777-1.01-2.434-.267-.64-.539-.553-.737-.563-.19-.01-.41-.011-.629-.011s-.574.082-.875.411c-.3.328-1.148 1.121-1.148 2.734 0 1.613 1.176 3.172 1.34 3.391.164.219 2.314 3.533 5.605 4.954.783.338 1.394.54 1.871.691.788.25 1.505.215 2.072.13.632-.094 1.942-.793 2.215-1.559.273-.766.273-1.422.192-1.559-.082-.137-.3-.219-.629-.383z"/>
-                 </svg>
-                 מעבר ישיר לוואטסאפ של נתנאל
-              </a>
-           </div>
-        </div>
-     </div>
+           <!-- WhatsApp CTA Card (Commented out for future restore) -->
+
+            <!-- Beautiful Phone Display Card -->
+            <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 p-8 sm:p-12 rounded-3xl shadow-xl shadow-slate-100 dark:shadow-none max-w-xl mx-auto space-y-6">
+               <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mx-auto">
+                  <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.435-5.127-3.738-6.562-6.562l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
+               </div>
+               <div class="space-y-3">
+                  <h3 class="font-extrabold text-xl text-slate-900 dark:text-white">זמין לשיחת ייעוץ והצעת מחיר</h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-light">
+                     מוזמנים להתקשר לפרטים נוספים ותיאום עבודה:
+                  </p>
+                  <div class="pt-2">
+                     <a href="tel:0503262022" class="inline-block text-3xl sm:text-4xl font-black text-amber-500 hover:text-amber-600 dark:hover:text-amber-400 tracking-widest transition-colors duration-200">
+                        050-326-2022
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
   </section>
 
   <!-- Footer -->
