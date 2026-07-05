@@ -121,7 +121,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                  <span>רמת שירות VIP</span>
                  <span class="flex items-center gap-1.5 text-emerald-400">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    זמין לעבודות באזור המרכז
+                    זמין לעבודות באזור ירושלים
                  </span>
               </div>
            </div>
