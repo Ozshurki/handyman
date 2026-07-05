@@ -168,7 +168,7 @@
               </p>
               
               <!-- Value Cards Grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                  <div class="bg-slate-50 dark:bg-slate-950 p-5 rounded-2xl border border-slate-100 dark:border-slate-800/80 hover:border-amber-500/20 dark:hover:border-amber-400/20 transition-all duration-300 shadow-sm">
                     <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-3">
                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
@@ -182,13 +182,6 @@
                     </div>
                     <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">עמידה בזמנים</h3>
                     <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">מגיע בדיוק בזמן שנקבע, מתקתק עבודה ומכבד את הזמן שלכם.</p>
-                 </div>
-                 <div class="bg-slate-50 dark:bg-slate-950 p-5 rounded-2xl border border-slate-100 dark:border-slate-800/80 hover:border-amber-500/20 dark:hover:border-amber-400/20 transition-all duration-300 shadow-sm">
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-3">
-                       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3M3 12c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M3 12l-3 3m3-3l3 3"/></svg>
-                    </div>
-                    <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">סדר וניקיון מופתי</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">עובד עם שואב אבק צמוד, שומר על הרהיטים ומחזיר את המצב לקדמותו.</p>
                  </div>
               </div>
            </div>
