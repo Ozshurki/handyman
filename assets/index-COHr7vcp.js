@@ -11,9 +11,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
       <!-- Logo -->
       <div class="flex items-center gap-3">
-        <div class="bg-amber-500 text-slate-900 p-2.5 rounded-xl shadow-md shadow-amber-500/20">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-             <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a2 2 0 0 0 0-2.8l-1-1a2 2 0 0 0-2.8 0L14.7 6.3zM15.4 7L17 8.6M14 9l-9 9m0 0l-2 2M5 18l-1.5-1.5M10.5 5.5l9 9" />
+        <div class="bg-gradient-to-br from-amber-400 to-amber-500 text-slate-950 p-2.5 rounded-2xl shadow-md shadow-amber-500/20 flex items-center justify-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+             <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
           </svg>
         </div>
         <span class="font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white tracking-tight">נתנאל <span class="text-amber-500">הנדימן</span></span>
