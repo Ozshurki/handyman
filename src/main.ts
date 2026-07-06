@@ -3,7 +3,7 @@ import './style.css';
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <div class="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col font-sans transition-colors duration-300">
   <!-- Navbar -->
-  <header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
+  <header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300 relative">
     <!-- POC Announcement Bar -->
     <div class="bg-amber-500 text-slate-950 text-center py-2 px-4 text-xs sm:text-sm font-extrabold tracking-wide border-b border-amber-600/30 flex items-center justify-center gap-2">
       <span class="animate-pulse">⚠️</span>
@@ -31,8 +31,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <a href="#contact" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">צור קשר</a>
       </nav>
       
-      <!-- Actions (Theme Switcher) -->
-      <div class="flex items-center justify-end col-start-2 md:col-start-3">
+      <!-- Actions (Theme Switcher & Hamburger) -->
+      <div class="flex items-center justify-end col-start-2 md:col-start-3 gap-3">
         <button id="theme-toggle" type="button" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-200 cursor-pointer" aria-label="Toggle theme">
           <!-- Sun Icon (shows in dark mode) -->
           <svg class="hidden dark:block w-5 h-5 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -43,7 +43,26 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
           </svg>
         </button>
+        
+        <!-- Hamburger Menu Button -->
+        <button id="mobile-menu-toggle" type="button" class="block md:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-200 cursor-pointer" aria-label="Open menu">
+          <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800/80 transition-all duration-300 shadow-lg py-6 px-4">
+      <nav class="flex flex-col gap-4 text-center">
+        <a href="#hero" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2 border-b border-slate-50 dark:border-slate-800/50">ראשי</a>
+        <a href="#about" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2 border-b border-slate-50 dark:border-slate-800/50">עלי</a>
+        <a href="#services" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2 border-b border-slate-50 dark:border-slate-800/50">שירותים</a>
+        <a href="#before-after" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2 border-b border-slate-50 dark:border-slate-800/50">השוואה</a>
+        <a href="#gallery" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2 border-b border-slate-50 dark:border-slate-800/50">פרויקטים</a>
+        <a href="#contact" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2">צור קשר</a>
+      </nav>
     </div>
   </header>
 
@@ -769,3 +788,33 @@ beforeAfterCards.forEach(card => {
     btnBefore?.classList.add('text-slate-500', 'dark:text-slate-400');
   });
 });
+
+// Mobile menu logic
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const hamburgerIcon = document.getElementById('hamburger-icon');
+
+if (mobileMenuToggle && mobileMenu && hamburgerIcon) {
+  mobileMenuToggle.addEventListener('click', () => {
+    const isHidden = mobileMenu.classList.contains('hidden');
+    if (isHidden) {
+      mobileMenu.classList.remove('hidden');
+      // Change to Close (X) icon
+      hamburgerIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />`;
+    } else {
+      mobileMenu.classList.add('hidden');
+      // Change back to Hamburger icon
+      hamburgerIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />`;
+    }
+  });
+
+  // Close menu when a link is clicked
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      hamburgerIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />`;
+    });
+  });
+}
+
