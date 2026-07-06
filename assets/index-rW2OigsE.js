@@ -1,16 +1,16 @@
 (function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})(),document.querySelector(`#app`).innerHTML=`
 <div class="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col font-sans transition-colors duration-300">
   <!-- Navbar -->
-  <header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
+  <header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300 relative">
     <!-- POC Announcement Bar -->
     <div class="bg-amber-500 text-slate-950 text-center py-2 px-4 text-xs sm:text-sm font-extrabold tracking-wide border-b border-amber-600/30 flex items-center justify-center gap-2">
       <span class="animate-pulse">⚠️</span>
       <span>הוכחת יכולת (POC) בלבד — האתר אינו פעיל לציבור הרחב</span>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 grid grid-cols-2 md:grid-cols-3 items-center">
       <!-- Logo -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-3 justify-start">
         <div class="bg-gradient-to-br from-amber-400 to-amber-500 text-slate-950 p-2.5 rounded-2xl shadow-md shadow-amber-500/20 flex items-center justify-center">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
@@ -19,19 +19,18 @@
         <span class="font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white tracking-tight">נתנאל <span class="text-amber-500">הנדימן</span></span>
       </div>
       
-      <!-- Actions (Nav Links & Theme Switcher) -->
-      <div class="flex items-center gap-4 sm:gap-8">
-        <!-- Nav Links -->
-        <nav class="hidden md:flex items-center gap-8">
-          <a href="#hero" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">ראשי</a>
-          <a href="#about" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">עלי</a>
-          <a href="#services" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">שירותים</a>
-          <a href="#before-after" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">השוואה</a>
-          <a href="#gallery" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">פרויקטים</a>
-          <a href="#contact" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">צור קשר</a>
-        </nav>
-        
-        <!-- Theme Toggle Button -->
+      <!-- Nav Links -->
+      <nav class="hidden md:flex items-center justify-center gap-8">
+        <a href="#hero" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">ראשי</a>
+        <a href="#about" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">עלי</a>
+        <a href="#services" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">שירותים</a>
+        <a href="#before-after" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">השוואה</a>
+        <a href="#gallery" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">פרויקטים</a>
+        <a href="#contact" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">צור קשר</a>
+      </nav>
+      
+      <!-- Actions (Theme Switcher & Hamburger) -->
+      <div class="flex items-center justify-end col-start-2 md:col-start-3 gap-3">
         <button id="theme-toggle" type="button" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-200 cursor-pointer" aria-label="Toggle theme">
           <!-- Sun Icon (shows in dark mode) -->
           <svg class="hidden dark:block w-5 h-5 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -42,7 +41,26 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
           </svg>
         </button>
+        
+        <!-- Hamburger Menu Button -->
+        <button id="mobile-menu-toggle" type="button" class="block md:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-200 cursor-pointer" aria-label="Open menu">
+          <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800/80 transition-all duration-300 shadow-lg py-6 px-4">
+      <nav class="flex flex-col gap-4 text-center">
+        <a href="#hero" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2 border-b border-slate-50 dark:border-slate-800/50">ראשי</a>
+        <a href="#about" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2 border-b border-slate-50 dark:border-slate-800/50">עלי</a>
+        <a href="#services" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2 border-b border-slate-50 dark:border-slate-800/50">שירותים</a>
+        <a href="#before-after" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2 border-b border-slate-50 dark:border-slate-800/50">השוואה</a>
+        <a href="#gallery" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2 border-b border-slate-50 dark:border-slate-800/50">פרויקטים</a>
+        <a href="#contact" class="mobile-nav-link text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 py-2">צור קשר</a>
+      </nav>
     </div>
   </header>
 
@@ -697,4 +715,4 @@
      </div>
   </footer>
 </div>
-`;var e=document.getElementById(`theme-toggle`);function t(e){e===`dark`?document.documentElement.classList.add(`dark`):document.documentElement.classList.remove(`dark`)}var n=localStorage.getItem(`theme`),r=window.matchMedia(`(prefers-color-scheme: dark)`).matches;t(n===`dark`||!n&&r?`dark`:`light`),e?.addEventListener(`click`,()=>{let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`)}),document.querySelectorAll(`.before-after-card`).forEach(e=>{let t=e.querySelector(`.toggle-before`),n=e.querySelector(`.toggle-after`),r=e.querySelector(`.before-view`),i=e.querySelector(`.after-view`),a=e.querySelector(`.before-badge`),o=e.querySelector(`.after-badge`);t?.addEventListener(`click`,()=>{r?.classList.remove(`opacity-0`),r?.classList.add(`opacity-100`),i?.classList.remove(`opacity-100`),i?.classList.add(`opacity-0`),a?.classList.remove(`hidden`),o?.classList.add(`hidden`),t.classList.add(`bg-white`,`dark:bg-slate-700`,`text-slate-900`,`dark:text-white`,`shadow-sm`),t.classList.remove(`text-slate-500`,`dark:text-slate-400`),n?.classList.remove(`bg-white`,`dark:bg-slate-700`,`text-slate-900`,`dark:text-white`,`shadow-sm`),n?.classList.add(`text-slate-500`,`dark:text-slate-400`)}),n?.addEventListener(`click`,()=>{r?.classList.remove(`opacity-100`),r?.classList.add(`opacity-0`),i?.classList.remove(`opacity-0`),i?.classList.add(`opacity-100`),a?.classList.add(`hidden`),o?.classList.remove(`hidden`),n.classList.add(`bg-white`,`dark:bg-slate-700`,`text-slate-900`,`dark:text-white`,`shadow-sm`),n.classList.remove(`text-slate-500`,`dark:text-slate-400`),t?.classList.remove(`bg-white`,`dark:bg-slate-700`,`text-slate-900`,`dark:text-white`,`shadow-sm`),t?.classList.add(`text-slate-500`,`dark:text-slate-400`)})});
+`;var e=document.getElementById(`theme-toggle`);function t(e){e===`dark`?document.documentElement.classList.add(`dark`):document.documentElement.classList.remove(`dark`)}var n=localStorage.getItem(`theme`),r=window.matchMedia(`(prefers-color-scheme: dark)`).matches;t(n===`dark`||!n&&r?`dark`:`light`),e?.addEventListener(`click`,()=>{let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`)}),document.querySelectorAll(`.before-after-card`).forEach(e=>{let t=e.querySelector(`.toggle-before`),n=e.querySelector(`.toggle-after`),r=e.querySelector(`.before-view`),i=e.querySelector(`.after-view`),a=e.querySelector(`.before-badge`),o=e.querySelector(`.after-badge`);t?.addEventListener(`click`,()=>{r?.classList.remove(`opacity-0`),r?.classList.add(`opacity-100`),i?.classList.remove(`opacity-100`),i?.classList.add(`opacity-0`),a?.classList.remove(`hidden`),o?.classList.add(`hidden`),t.classList.add(`bg-white`,`dark:bg-slate-700`,`text-slate-900`,`dark:text-white`,`shadow-sm`),t.classList.remove(`text-slate-500`,`dark:text-slate-400`),n?.classList.remove(`bg-white`,`dark:bg-slate-700`,`text-slate-900`,`dark:text-white`,`shadow-sm`),n?.classList.add(`text-slate-500`,`dark:text-slate-400`)}),n?.addEventListener(`click`,()=>{r?.classList.remove(`opacity-100`),r?.classList.add(`opacity-0`),i?.classList.remove(`opacity-0`),i?.classList.add(`opacity-100`),a?.classList.add(`hidden`),o?.classList.remove(`hidden`),n.classList.add(`bg-white`,`dark:bg-slate-700`,`text-slate-900`,`dark:text-white`,`shadow-sm`),n.classList.remove(`text-slate-500`,`dark:text-slate-400`),t?.classList.remove(`bg-white`,`dark:bg-slate-700`,`text-slate-900`,`dark:text-white`,`shadow-sm`),t?.classList.add(`text-slate-500`,`dark:text-slate-400`)})});var i=document.getElementById(`mobile-menu-toggle`),a=document.getElementById(`mobile-menu`),o=document.getElementById(`hamburger-icon`);i&&a&&o&&(i.addEventListener(`click`,()=>{a.classList.contains(`hidden`)?(a.classList.remove(`hidden`),o.innerHTML=`<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />`):(a.classList.add(`hidden`),o.innerHTML=`<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />`)}),document.querySelectorAll(`.mobile-nav-link`).forEach(e=>{e.addEventListener(`click`,()=>{a.classList.add(`hidden`),o.innerHTML=`<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />`})}));
