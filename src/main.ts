@@ -10,9 +10,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <span>הוכחת יכולת (POC) בלבד — האתר אינו פעיל לציבור הרחב</span>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 grid grid-cols-2 md:grid-cols-3 items-center">
       <!-- Logo -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-3 justify-start">
         <div class="bg-gradient-to-br from-amber-400 to-amber-500 text-slate-950 p-2.5 rounded-2xl shadow-md shadow-amber-500/20 flex items-center justify-center">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
@@ -21,19 +21,18 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <span class="font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white tracking-tight">נתנאל <span class="text-amber-500">הנדימן</span></span>
       </div>
       
-      <!-- Actions (Nav Links & Theme Switcher) -->
-      <div class="flex items-center gap-4 sm:gap-8">
-        <!-- Nav Links -->
-        <nav class="hidden md:flex items-center gap-8">
-          <a href="#hero" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">ראשי</a>
-          <a href="#about" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">עלי</a>
-          <a href="#services" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">שירותים</a>
-          <a href="#before-after" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">השוואה</a>
-          <a href="#gallery" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">פרויקטים</a>
-          <a href="#contact" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">צור קשר</a>
-        </nav>
-        
-        <!-- Theme Toggle Button -->
+      <!-- Nav Links -->
+      <nav class="hidden md:flex items-center justify-center gap-8">
+        <a href="#hero" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">ראשי</a>
+        <a href="#about" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">עלי</a>
+        <a href="#services" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">שירותים</a>
+        <a href="#before-after" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">השוואה</a>
+        <a href="#gallery" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">פרויקטים</a>
+        <a href="#contact" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200">צור קשר</a>
+      </nav>
+      
+      <!-- Actions (Theme Switcher) -->
+      <div class="flex items-center justify-end col-start-2 md:col-start-3">
         <button id="theme-toggle" type="button" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-200 cursor-pointer" aria-label="Toggle theme">
           <!-- Sun Icon (shows in dark mode) -->
           <svg class="hidden dark:block w-5 h-5 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
